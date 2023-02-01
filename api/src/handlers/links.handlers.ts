@@ -15,36 +15,11 @@ export const create = async (req: Request, res: Response) => {
     throw new Error('Error on create link!')
   }
 }
-// export const getAll = async (req: Request, res: Response) => {
-//   try {
-//     const order = await orderModel.getAll()
-//     res.json({
-//       message: 'Done!',
-//       data: { ...order }
-//     })
-//   } catch (error) {
-//     throw new Error('Error on get all orders!')
-//   }
-// }
-// export const getOne = async (req: Request, res: Response) => {
-//   try {
-//     const order = await orderModel.getOne(req.params.id as unknown as number)
-//     res.json({
-//       message: 'Done!',
-//       data: { ...order }
-//     })
-//   } catch (error) {
-//     throw new Error('Error on get one orders!')
-//   }
-// }
-// export const updateOne = async (req: Request, res: Response) => {
-//   try {
-//     const order = await orderModel.updateOne(req.body)
-//     res.json({
-//       message: 'Done!',
-//       data: { ...order }
-//     })
-//   } catch (error) {
-//     throw new Error('Error on update one order!')
-//   }
-// }
+export const getAll = async (req: Request, res: Response) => {
+  try {
+    const shortlinks = await linkModel.getAll()
+    res.json({shortlinks})
+  } catch (error) {
+    throw new Error('Error on get all links!')
+  }
+}

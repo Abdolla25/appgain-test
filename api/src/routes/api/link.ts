@@ -5,8 +5,7 @@ const user = express.Router()
 
 user
   .route('/')
-//   .get(linkHandlers.getAll)
+  .get(linkHandlers.getAll)
   .post(linkHandlers.create)
-//   .put(validateJWT, linkHandlers.updateOne)
 
 export default user

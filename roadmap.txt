@@ -1,8 +1,8 @@
 1- initialize server                                        Done
 2- connect firebase with node.js.                           Done
-3- create schema of database.
-4- create model for api in node.js.
-5- test express server with database.
+3- create schema of database.                               Done
+4- create model for api in node.js.                         Done
+5- test express server with database.                       Done
 6- create frontend using react.js and test it.
 7- deploy code on Heroku
 8- search for docker/postman
