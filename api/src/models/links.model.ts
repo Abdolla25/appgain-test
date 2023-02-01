@@ -11,14 +11,15 @@ export type Link = {
 export class LinkModel {
     async create(link: Link) {
         try {
-            const linkRef = db.collection('links').doc(`${link.slug || uuidv4()}`)
+            const slug = `${link.slug || uuidv4()}`
+            const linkRef = db.collection('links').doc(slug)
             const result = await linkRef.set({
-                "slug": link.slug,
+                "slug": slug,
                 "ios": link.ios,
                 "android": link.android,
                 "web": link.web
             }, { merge: true })
-            return link.slug
+            return slug
         } catch (error) {
             throw new Error('Error on create link!')
         }
