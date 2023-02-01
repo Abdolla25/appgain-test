@@ -1,9 +1,0 @@
-CREATE TABLE orders_products
-(
-  Quantity INT NOT NULL,
-  OID INT NOT NULL,
-  PID INT NOT NULL,
-  PRIMARY KEY (OID, PID),
-  FOREIGN KEY (OID) REFERENCES orders(id),
-  FOREIGN KEY (PID) REFERENCES products(id)
-);
