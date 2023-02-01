@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "List All Shortlinks",
+			"name": "List All Shortlinks (Locally)",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -26,13 +26,34 @@
 			"response": []
 		},
 		{
-			"name": "Create Shortlink",
+			"name": "List All Shortlinks (Heroku)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://quiet-hollows-04464.herokuapp.com/api/shortlinks",
+					"protocol": "https",
+					"host": [
+						"quiet-hollows-04464",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"shortlinks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shortlink (Locally)",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"slug\": \"s5G1f42\",\r\n  \"ios\": {\r\n    \"primary\": \"http://...\",\r\n    \"fallback\": \"http://...\"\r\n  },\r\n  \"android\": {\r\n    \"primary\": \"http://...\",\r\n    \"fallback\": \"http://...\"\r\n  },\r\n  \"web\": \"http://...\"\r\n}",
+					"raw": "{\r\n  \"slug\": \"\",\r\n  \"ios\": {\r\n    \"primary\": \"http://...\",\r\n    \"fallback\": \"http://...\"\r\n  },\r\n  \"android\": {\r\n    \"primary\": \"http://...\",\r\n    \"fallback\": \"http://...\"\r\n  },\r\n  \"web\": \"http://...\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -45,6 +66,36 @@
 						"localhost"
 					],
 					"port": "5000",
+					"path": [
+						"api",
+						"shortlinks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shortlink (Heroku)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"slug\": \"s5G1f25\",\r\n  \"ios\": {\r\n    \"primary\": \"http://...\",\r\n    \"fallback\": \"http://...\"\r\n  },\r\n  \"android\": {\r\n    \"primary\": \"http://...\",\r\n    \"fallback\": \"http://...\"\r\n  },\r\n  \"web\": \"http://...\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://quiet-hollows-04464.herokuapp.com/api/shortlinks",
+					"protocol": "https",
+					"host": [
+						"quiet-hollows-04464",
+						"herokuapp",
+						"com"
+					],
 					"path": [
 						"api",
 						"shortlinks"
