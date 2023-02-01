@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon ./src/index.ts",
     "clean": "rimraf build/",
-    "build": "yarn clean && npx tsc",
+    "build": "npm run clean && npx tsc",
     "start": "npm run build && node build/index.js"
   },
   "repository": {
