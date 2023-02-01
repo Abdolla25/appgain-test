@@ -4,7 +4,7 @@
   "description": "This repo is for test task...",
   "main": "index.js",
   "scripts": {
-    "api:start": "cd api/ && npm run start"
+    "start": "cd api/ && npm run start"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Abdolla25/appgain-test/issues"
+  },
+  "engines": {
+    "node": "16.16.0"
   },
   "homepage": "https://github.com/Abdolla25/appgain-test#readme"
 }
