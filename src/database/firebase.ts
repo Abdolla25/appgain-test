@@ -1,16 +1,11 @@
 import { App, initializeApp, cert } from 'firebase-admin/app'
 import { getFirestore } from 'firebase-admin/firestore'
-import { apiKey, appId, authDomain, messagingSenderId, projectId, storageBucket } from '../config';
+import { GOOGLE_CREDS } from '../config';
 
-const firebaseConfig = {
-  apiKey: apiKey,
-  authDomain: authDomain,
-  projectId: projectId,
-  storageBucket: storageBucket,
-  messagingSenderId: messagingSenderId,
-  appId: appId
-};
+const firebaseConfig = JSON.parse(GOOGLE_CREDS);
 
-initializeApp(firebaseConfig);
+initializeApp({
+  credential: cert(firebaseConfig)
+});
 
 export const db = getFirestore()
