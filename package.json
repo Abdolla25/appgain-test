@@ -1,0 +1,19 @@
+{
+  "name": "appgain-test",
+  "version": "1.0.0",
+  "description": "This repo is for test task...",
+  "main": "index.js",
+  "scripts": {
+    "api:start": "cd api/ && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdolla25/appgain-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdolla25/appgain-test/issues"
+  },
+  "homepage": "https://github.com/Abdolla25/appgain-test#readme"
+}
